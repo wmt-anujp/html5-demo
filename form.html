@@ -10,61 +10,78 @@
     </script>
     <link rel="icon" href="form.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Form</title>
+    <title>Form Page</title>
 </head>
 
 <body>
-    <h4 style="padding: 10px;">Personal Information</h4>
-    <div style="margin: 25px;" class="container-fluid">
-        <label>First Name: </label>
-        <input style="margin: 10px;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+    <form>
+        <!-- Personal info starts -->
+        <h4 style="padding: 10px;">Personal Information</h4>
+        <div style="margin: 20px;" class="container-fluid">
+            <label>First Name: </label>
+            <input style="margin: 20px;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
 
-        <!-- <div style="margin: 25px;" class="container-fluid"> -->
-        <label>Last Name: </label>
-        <input style="margin: 10px;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode > 31 && event.charCode<33)" required><br>
+            <!-- <div style="margin: 20px;" class="container-fluid"> -->
+            <label>Last Name: </label>
+            <input style="margin: 20px;padding: auto;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
 
-        <label>Date of Birth: </label>
-        <select name="Month" id="Month">
-            <option value="Month">Month</option>
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-        </select>
-        <select name="Day" id="Day">
-            <option value="Day">Day</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <select name="Year" id="Year">
-            <option value="Year">Year</option>
-            <option value="2000">2000</option>
-            <option value="2001">2001</option>
-            <option value="2002">2002</option>
-            <option value="2003">2003</option>
-            <option value="2004">2004</option>
-        </select>
-        <i style="font-size:22px" class="fa">&#xf059;</i>
-    </div>
+            <!-- DOB starts -->
+            <!-- <div style="margin: 25px;" class="container-fluid"> -->
+            <label>Date of Birth: </label>
+            <select style="margin: 10px;" name="Month" id="Month">
+                <option value="Month">Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+            </select>
+            <select name="Day" id="Day">
+                <option value="Day">Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="Year" id="Year">
+                <option value="Year">Year</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+            </select>
+            <i style="font-size:22px" class="fa">&#xf059;</i><br>
+            <!-- DOB ends -->
 
-    <div style="margin: 25px;" class="container-fluid">
-        <label for="Gender">Gender:</label>
-        <select name="Gender" id="Gender">
-            <option value="Choose a Gender">Choose a Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select>
-        <i style="font-size:22px" class="fa">&#xf059;</i>
-    </div><br>
+            <!-- Gender starts -->
+            <label for="Gender">Gender:</label>
+            <select style="margin: 20px;" name="Gender" id="Gender">
+                <option value="Choose a Gender">Choose a Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <i style="font-size:22px" class="fa">&#xf059;</i>
+            <!-- Gender ends -->
+        </div>
 
-    <h4 style="padding: 10px;">Account Information</h4>
-    <div class="container-fluid">
-        <label for="name">Name</label>
-    </div>
+        <!-- Personal info ends -->
+
+        <!-- Account Information starts -->
+        <h4 style="padding: 10px;">Account Information</h4>
+
+        <!-- Email starts -->
+        <div style="margin: 25px;" class="container-fluid">
+            <label for="Email">Email:</label>
+            <input style="margin: 20px;display: inline-block;width: 6em;position: relative;top: -3em;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required>
+            <label>(Your email will be your username)</label>
+            <br>
+        </div>
+        <!-- Email ends -->
+
+        <!-- Account Information ends -->
+    </form>
 </body>
 
 </html>
