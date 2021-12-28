@@ -56,13 +56,14 @@
             <!-- DOB ends -->
 
             <!-- Gender starts -->
-            <label for="Gender">Gender:</label>
-            <select style="margin: 20px;" name="Gender" id="Gender">
-                <option value="Choose a Gender">Choose a Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-            <i style="font-size:22px" class="fa">&#xf059;</i>
+            <label for="Gender">Gender:
+                <select style="margin: 20px;" name="Gender" id="Gender">
+                    <option value="Choose a Gender">Choose a Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <i style="font-size:22px" class="fa">&#xf059;</i>
+            </label>
             <!-- Gender ends -->
         </div>
 
@@ -74,12 +75,23 @@
         <!-- Email starts -->
         <div style="margin: 25px;" class="container-fluid">
             <label for="Email">Email:</label>
-            <input style="margin: 20px;display: inline-block;width: 6em;position: relative;top: -3em;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required>
-            <label>(Your email will be your username)</label>
-            <br>
+            <input style="margin: 20px;" type="email" placeholder="(Your email will be your username)" required>
+            <label style="display: inline-block;width: 6em; margin-right: .5em;padding-top: 1.5em;"></label><br>
+            <!-- Email ends -->
+            <!-- Retype email starts -->
+            <!-- <div style="margin: 25px;" class="container-fluid"> -->
+            <label for="Email">Re-type Email:</label>
+            <input style="margin: 20px;" type="email" placeholder="(Your email will be your username)" required>
+            <label style="display: inline-block;width: 6em; margin-right: .5em;padding-top: 1.5em;"></label>
         </div>
-        <!-- Email ends -->
+        <!-- Retype email ends -->
 
+        <!-- Password starts -->
+        <div style="margin: 25px;" class="container-fluid">
+            <label for="password">Password:</label>
+            <input type="password" style="margin: 20px;" id="password" name="password" maxlength="16" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </div>
+        <!-- Password ends -->
         <!-- Account Information ends -->
     </form>
 </body>
