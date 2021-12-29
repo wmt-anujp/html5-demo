@@ -121,7 +121,7 @@
 
             <!-- State starts -->
             <label for="State">State: </label>
-            <select style="margin: 10px;width: 17%;" name="State" id="State">
+            <select style="margin: 10px;width: 17%;" name="State" id="State" required>
                 <option value="Choose a State">Choose a State</option>
                 <option value="Gujarat">Gujarat</option>
                 <option value="Mumbai">Mumbai</option>
@@ -133,17 +133,17 @@
 
             <!-- Zip code starts -->
             <label for="ZC">Zip Code: </label>
-            <input style="margin: 20px;width: 17%;" type="text">
+            <input style="margin: 20px;width: 17%;" onkeypress="return (event.charCode > 47 && event.charCode < 58)" placeholder="Numeric only" type="text">
             <input style="margin: 20px;width: 5%" type="text" placeholder="Optional" disabled><br>
             <!-- Zip code ends -->
 
             <!-- Phone Number starts -->
             <label for="Phone">Phone: </label>
-            <input style="margin: 20px;width: 9%;" maxlength="13" placeholder="Numeric only">
-            <i style="font-size:22px" class="fa">&#xf059;</i>
-            <select style="margin: 10px;width: 6%;" name="Phone" id="Phone">
-                <option value="Mobile">Mobile</option>
-                <option value="Home">Home</option>
+            <input style="margin: 20px;width: 9%;" onkeypress="return (event.charCode > 47 && event.charCode < 58)" maxlength="10" placeholder="Numeric only">
+            <i style="font-size:22px " class="fa ">&#xf059;</i>
+            <select style="margin: 10px;width: 6%; " name="Phone " id="Phone ">
+                <option value="Mobile ">Mobile</option>
+                <option value="Home ">Home</option>
             </select>
             <!-- Phone Number ends -->
         </div>
