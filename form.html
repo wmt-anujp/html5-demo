@@ -76,23 +76,36 @@
         <!-- Email starts -->
         <div style="margin: 25px;" class="container-fluid">
             <label for="Email">Email:</label>
-            <input style="margin: 20px;" type="email" placeholder="(Your email will be your username)" required>
-            <label style="display: inline-block;width: 6em; margin-right: .5em;padding-top: 1.5em;"></label><br>
+            <input style="margin: 20px;" type="email" placeholder="(Your email will be your username)" required><br>
             <!-- Email ends -->
+
             <!-- Retype email starts -->
-            <!-- <div style="margin: 25px;" class="container-fluid"> -->
             <label for="Email">Re-type Email:</label>
             <input style="margin: 20px;" type="email" placeholder="(Your email will be your username)" required>
-            <label style="display: inline-block;width: 6em; margin-right: .5em;padding-top: 1.5em;"></label>
-        </div>
-        <!-- Retype email ends -->
+            <label style="display: inline-block;width: 6em; margin-right: .5em;padding-top: 1.5em;"></label><br>
+            <!-- Retype email ends -->
 
-        <!-- Password starts -->
-        <div style="margin: 25px;" class="container-fluid">
+            <!-- Password starts -->
             <label for="password">Password:</label>
-            <input type="password" style="margin: 20px;" id="password" name="password" maxlength="16" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <input type="password" style="margin: 20px;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <!-- Password ends -->
+
+            <!-- Security Question starts -->
+            <label for="sq">Security Question:</label>
+            <select style="margin: 20px;" name="sq" id="sq">
+                <option value="security question">Choose a security Question</option>
+                <option value="maiden">What is your mother's maiden name</option>
+                <option value="favrorite place">Which is your favrorite place</option>
+            </select>
+            <i style="font-size:22px" class="fa">&#xf059;</i><br>
+            <!-- </div> -->
+
+            <!-- <div style="margin: 25px;" class="container-fluid"> -->
+            <label for="sa">Security Answer:</label>
+            <input style="margin: 25px;" type="text">
         </div>
-        <!-- Password ends -->
+
+        <!-- Security Question ends -->
         <!-- Account Information ends -->
     </form>
 </body>
