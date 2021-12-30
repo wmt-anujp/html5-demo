@@ -14,13 +14,13 @@
     <title>Form Page</title>
     <style>
         label {
-            display: inline-flexbox;
+            display: inline-box;
             text-align: right;
             margin-left: 58px;
         }
         
         input {
-            display: inline-flexbox;
+            display: inline-box;
             margin-top: 1%;
             margin-left: 10px;
         }
@@ -31,18 +31,18 @@
     <form>
         <!-- Personal info starts -->
         <h4 style="padding: 10px;">Personal Information</h4>
-        <div style="margin: 20px;" class="container-fluid">
+        <div class="container-fluid">
             <!-- <div> -->
             <label for="FN">First Name: </label>
             <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
         </div>
 
-        <div style="margin: 20px;" class="container-fluid">
+        <div class="container-fluid">
             <label for="LN">Last Name: </label>
             <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
         </div>
 
-        <div style="margin: 7px;" class="container-fluid">
+        <div class="container-fluid">
             <!-- DOB starts -->
             <label for="DOB">Date of Birth: </label>
             <select style="margin-left: 8px;" name="Month" id="Month">
@@ -73,7 +73,7 @@
         </div>
         <!-- DOB ends -->
 
-        <div style="margin: 20px;" class="container-fluid">
+        <div class="container-fluid">
             <!-- Gender starts -->
             <label style="margin-left: 82px;margin-right: 9px;" for="Gender">Gender: </label>
             <select name="Gender" id="Gender">
@@ -91,24 +91,24 @@
         <h4 style="padding: 10px;">Account Information</h4>
 
         <!-- Email starts -->
-        <div style="margin: 25px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 96px;" for="Email">Email: </label>
             <input style="margin-left: 9px;width: 17%;" type="email" placeholder="(Your email will be your username)" required><br>
         </div>
 
-        <div style="margin: 25px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 34px;" for="Email">Re-type Email: </label>
             <input style="margin-left: 11px;width: 17%;" type="email" placeholder="(Your email will be your username)" required><br>
         </div>
         <!-- Email ends -->
 
         <!-- Password starts -->
-        <div style="margin: 25px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 65px;" for="password">Password: </label>
             <input type="password" style="margin-left: 10px;width: 21.5%;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)">
         </div>
 
-        <div style="margin: 12px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 20px;" for="password">Re-type Password: </label>
             <input style="margin-left: 10px;width: 21.5%;" type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
         </div>
@@ -116,7 +116,7 @@
 
         <!-- Security Question starts -->
 
-        <div style="margin: 40px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: -5px;" for="sq">Security Question: </label>
             <select style="margin-left: 9px;" name="sq" id="sq">
                 <option value="security question">Choose a security Question</option>
@@ -126,7 +126,7 @@
             <i style="font-size:22px;margin-left: 10px;" class="fa">&#xf059;</i><br>
         </div>
 
-        <div style="margin: -18px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 65px;" for="sa">Security Answer: </label>
             <input style="margin-left: 10px;width: 20%;" type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="(Not Case-sensitive)"><br><br><br>
         </div>
@@ -138,20 +138,20 @@
         <h4 style="padding: 20px;margin-left: -12px;">Contact Information</h4>
 
         <!-- Address starts -->
-        <div style="margin: 25px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 76px;" for="Address">Address: </label>
             <input style="margin-left: 12px;width: 17%;" type="text" required><br>
         </div>
         <!-- Address ends -->
 
         <!-- City starts -->
-        <div style="margin-left: 29px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 98px;" for="City">City: </label>
             <input style="margin: 20px;width: 17%;" type="text" onkeypress="return (event.charCode>64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)" required><br>
         </div>
         <!-- City ends -->
         <!-- State starts -->
-        <div style="margin: 15px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 105px;" for="State">State: </label>
             <select style="margin-left: 18px;width: 17%;" name="State" id="State" required>
                 <option value="Choose a State">Choose a State</option>
@@ -165,7 +165,7 @@
         <!-- State ends -->
 
         <!-- Zip code starts -->
-        <div style="margin: 25px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 69px;" for="ZC">Zip Code: </label>
             <input style="margin-left: 15px;width: 7%;" onkeypress="return (event.charCode > 47 && event.charCode < 58)" placeholder="Numeric only" type="text" maxlength="6">
             <input style="margin: 20px;width: 5%" type="text" placeholder="Optional" disabled>
@@ -173,7 +173,7 @@
         <!-- Zip code ends -->
 
         <!-- Phone Number starts -->
-        <div style="padding: 0px;margin-left: 13px;" class="container-fluid">
+        <div class="container-fluid">
             <label style="margin-left: 110px;" for="Phone">Phone: </label>
             <input style="margin-left: 16px;width: 9%;" onkeypress="return (event.charCode > 47 && event.charCode < 58)" maxlength="11" placeholder="Numeric only">
             <i style="font-size:22px;margin-left: 7px;" class="fa ">&#xf059;</i>
