@@ -24,6 +24,12 @@
             display: inline-block;
             margin-top: 16px;
             margin-left: 10px;
+            width: 250px;
+        }
+        
+        .container-fluid {
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -33,22 +39,21 @@
         <form>
             <!-- Personal info starts -->
             <h4>Personal Information</h4>
-            <div>
-                <!-- <div> -->
-                <label for="FN">First Name: </label>
-                <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
-            </div>
+            <!-- <div> -->
+            <label for="FN">First Name: </label>
+            <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+            <!-- </div> -->
 
-            <div>
-                <label for="LN">Last Name: </label>
-                <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
-                <div>(test)</div>
-            </div>
+            <!-- <div> -->
+            <label for="LN">Last Name: </label>
+            <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+            <div>(test)</div>
+            <!-- </div> -->
 
-            <div class="justify-content-around">
-                <!-- DOB starts -->
-                <label for="DOB">Date of Birth: </label>
-                <select style="margin-left: 8px;" name="Month" id="Month">
+            <!-- <div> -->
+            <!-- DOB starts -->
+            <label for="DOB">Date of Birth: </label>
+            <select style="margin-left: 8px;" name="Month" id="Month">
                 <option value="Month">Month</option>
                 <option value="January">January</option>
                 <option value="February">February</option>
@@ -56,7 +61,7 @@
                 <option value="April">April</option>
                 <option value="May">May</option>
             </select>
-                <select style="margin: 10px;width: 5%;" name="Day" id="Day">
+            <select style="margin: 10px;width: 5%;" name="Day" id="Day">
                 <option value="Day">Day</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -64,7 +69,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-                <select style="margin: 10px;width: 5%;" name="Year" id="Year">
+            <select style="margin: 10px;width: 5%;" name="Year" id="Year">
                 <option value="Year">Year</option>
                 <option value="2000">2000</option>
                 <option value="2001">2001</option>
@@ -72,21 +77,21 @@
                 <option value="2003">2003</option>
                 <option value="2004">2004</option>
             </select>
-                <i style="font-size:22px" class="fa">&#xf059;</i><br>
-            </div>
+            <i style="font-size:22px" class="fa">&#xf059;</i><br>
+            <!-- </div> -->
             <!-- DOB ends -->
 
-            <div class="justify-content-around">
-                <!-- Gender starts -->
-                <label class="justify-content-around" for="Gender">Gender: </label>
-                <select name="Gender" id="Gender">
+            <!-- <div> -->
+            <!-- Gender starts -->
+            <label for="Gender">Gender: </label>
+            <select name="Gender" id="Gender">
                 <option value="Choose a Gender">Choose a Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
-                <i class="fa">&#xf059;</i><br>
-                <!-- Gender ends -->
-            </div>
+            <i class="fa">&#xf059;</i><br>
+            <!-- Gender ends -->
+            <!-- </div> -->
 
             <!-- Personal info ends -->
             <!-- ---------------------------------------------------------------------------------------- -->
@@ -94,99 +99,99 @@
             <h4>Account Information</h4>
 
             <!-- Email starts -->
-            <div class="justify-content-around">
-                <label for="Email">Email: </label>
-                <input type="email" placeholder="(Your email will be your username)" required><br>
-            </div>
+            <!-- <div> -->
+            <label for="Email">Email: </label>
+            <input type="email" placeholder="(Your email will be your username)" required><br>
+            <!-- </div> -->
 
-            <div class="justify-content-around">
-                <label for="Email">Re-type Email: </label>
-                <input type="email" placeholder="(Your email will be your username)" required><br>
-            </div>
+            <!-- <div> -->
+            <label for="Email">Re-type Email: </label>
+            <input type="email" placeholder="(Your email will be your username)" required><br>
+            <!-- </div> -->
             <!-- Email ends -->
 
             <!-- Password starts -->
-            <div class="justify-content-around">
-                <label for="password">Password: </label>
-                <input type="password" style="margin-left: 10px;width: 21.5%;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)">
-            </div>
+            <!-- <div> -->
+            <label for="password">Password: </label>
+            <input type="password" style="margin-left: 10px;width: 21.5%;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+            <!-- </div> -->
 
-            <div class="justify-content-around">
-                <label for="password">Re-type Password: </label>
-                <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
-            </div>
-            <!-- Password ends -->
+            <!-- <div> -->
+            <label for="password">Re-type Password: </label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+    </div>
+    <!-- Password ends -->
 
-            <!-- Security Question starts -->
-            <div class="justify-content-around">
-                <label for="sq">Security Question: </label>
-                <select name="sq" id="sq">
-                <option value="security question">Choose a security Question</option>
-                <option value="maiden">What is your mother's maiden name</option>
-                <option value="favrorite place">Which is your favrorite place</option>
-            </select>
-                <i style="font-size:22px;margin-left: 10px;" class="fa">&#xf059;</i><br>
-            </div>
+    <!-- Security Question starts -->
+    <!-- <div> -->
+    <label for="sq">Security Question: </label>
+    <select name="sq" id="sq">
+        <option value="security question">Choose a security Question</option>
+        <option value="maiden">What is your mother's maiden name</option>
+        <option value="favrorite place">Which is your favrorite place</option>
+    </select>
+    <i style="font-size:22px;margin-left: 10px;" class="fa">&#xf059;</i><br>
+    <!-- </div> -->
 
-            <div>
-                <label for="sa">Security Answer: </label>
-                <input type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="(Not Case-sensitive)"><br><br><br>
-            </div>
-            <!-- Security Question ends -->
+    <!-- <div> -->
+    <label for="sa">Security Answer: </label>
+    <input type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="(Not Case-sensitive)"><br>
+    <!-- </div> -->
+    <!-- Security Question ends -->
 
-            <!-- Account Information ends -->
-            <!-- ------------------------------------------------------------------------------------------------------- -->
-            <!-- Contact Information starts -->
-            <h4>Contact Information</h4>
+    <!-- Account Information ends -->
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+    <!-- Contact Information starts -->
+    <h4>Contact Information</h4>
 
-            <!-- Address starts -->
-            <div>
-                <label for="Address">Address: </label>
-                <input type="text" required><br>
-            </div>
-            <!-- Address ends -->
+    <!-- Address starts -->
+    <!-- <div> -->
+    <label for="Address">Address: </label>
+    <input type="text" required><br>
+    <!-- </div> -->
+    <!-- Address ends -->
 
-            <!-- City starts -->
-            <div class="justify-content-around">
-                <label for="City">City: </label>
-                <input type="text" onkeypress="return (event.charCode>64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)" required><br>
-            </div>
-            <!-- City ends -->
-            <!-- State starts -->
-            <div class="justify-content-around">
-                <label for="State">State: </label>
-                <select name="State" id="State" required>
-                <option value="Choose a State">Choose a State</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Rajasthan">Rajasthan</option>
-            </select><br>
-            </div>
-            <!-- State ends -->
+    <!-- City starts -->
+    <!-- <div> -->
+    <label for="City">City: </label>
+    <input type="text" onkeypress="return (event.charCode>64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)" required><br>
+    <!-- </div> -->
+    <!-- City ends -->
+    <!-- State starts -->
+    <!-- <div> -->
+    <label for="State">State: </label>
+    <select name="State" id="State" required>
+        <option value="Choose a State">Choose a State</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Rajasthan">Rajasthan</option>
+    </select><br>
+    <!-- </div> -->
+    <!-- State ends -->
 
-            <!-- Zip code starts -->
-            <div>
-                <label for="ZC">Zip Code: </label>
-                <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" placeholder="Numeric only" type="text" maxlength="6">
-                <input type="text" placeholder="Optional" disabled>
-            </div>
-            <!-- Zip code ends -->
+    <!-- Zip code starts -->
+    <!-- <div> -->
+    <label for="ZC">Zip Code: </label>
+    <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" placeholder="Numeric only" type="text" maxlength="6">
+    <input type="text" placeholder="Optional" disabled><br>
+    <!-- </div> -->
+    <!-- Zip code ends -->
 
-            <!-- Phone Number starts -->
-            <div>
-                <label for="Phone">Phone: </label>
-                <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" maxlength="11" placeholder="Numeric only">
-                <i class="fa ">&#xf059;</i>
-                <select name="Phone " id="Phone ">
-                <option value="Mobile ">Mobile</option>
-                <option value="Home ">Home</option>
-            </select>
-            </div>
-            <!-- Phone Number ends -->
-            <!-- Contact Information ends -->
-        </form>
+    <!-- Phone Number starts -->
+    <!-- <div> -->
+    <label for="Phone">Phone: </label>
+    <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" maxlength="11" placeholder="Numeric only">
+    <i class="fa ">&#xf059;</i>
+    <select name="Phone " id="Phone ">
+        <option value="Mobile ">Mobile</option>
+        <option value="Home ">Home</option>
+    </select>
+    <!-- </div> -->
+    <!-- Phone Number ends -->
+    <!-- Contact Information ends -->
+    </form>
     </div>
 </body>
 
