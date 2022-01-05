@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,
+        button {
+            padding: 7px;
+            height: 40px;
+        }
+        
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="result"></div> -->
+    <script>
+        // const successCallback = (position) => {
+        //     console.log(position);
+        // };
+        // const errorCallback = (error) => {
+        //     console.error(error);
+        // };
+        // navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+        //     enableHighAccuracy: true,
+        //     timeout: 5000
+        // });
+        // if (typeof(Storage) !== "undefined") {
+        //     console.log("Code for localStorage/sessionStorage.");
+        // } else {
+        //     console.log("Sorry! No Web Storage support..");
+        // }
+        // -----------------------------------------------------------
+
+        // Check browser support
+        // if (typeof(Storage) !== "undefined") {
+        //     // Store
+        //     localStorage.setItem("lastname", "Anuj");
+        //     // Retrieve
+        //     document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        // } else {
+        //     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        // }
+        // ------------------------------------------------------------------------
+        // function getlocalstorage(user) {
+        //     JSON.stringify(user);
+        // }
+        // const user = {
+        //     name: "Anuj"
+        // };
+        // localStorage.setItem("user", user);
+        // localStorage.getItem("user");
+
+        // function clickCounter() {
+        //     if (typeof(Storage) !== "undefined") {
+        //         if (localStorage.clickcount) {
+        //             localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        //         } else {
+        //             localStorage.clickcount = 1;
+        //         }
+        //         document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        //     } else {
+        //         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage";
+        //     }
+        // }
+        // localStorage.setItem("age", "50");
+        // localStorage.setItem("Name", "patel");
+        // console.log(localStorage.key(2));
+        // console.log(localStorage.getItem("Name"));
+
+        // -----------------------------------------------------------------------------
+        const inpKey = document.getElementById("inpKey");
+        const inpValue = document.getElementById("inpValue");
+        const btnInsert = document.getElementById("btnInsert");
+        const lsOutput = document.getElementById("lsOutput");
+
+        btnInsert.onclick = function() {
+            const key = inpKey.value;
+            const value = inpValue.value;
+
+            console.log(key);
+            console.log(value);
+
+            if (key && value) {
+                localStorage.setItem(key, value);
+                location.reload();
+            }
+        };
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key();
+            const value = localStorage.getItem(key);
+
+            lsOutput.innerHTML += `${key}: ${value}<br/>`;
+        }
+    </script>
+    <!-- <div id="result">
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    </div> -->
+    <h2 id="title">Local Storage</h2>
+    <fieldset>
+        <legend>Insert Data</legend>
+        <input type="text" id="inpKey" placeholder="Enter Key">
+        <input type="text" id="inpValue" placeholder="Enter Value">
+        <button type="button" id="btnInsert">Insert Data</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Local Storage Output</legend>
+        <div id="lsOutput"></div>
+    </fieldset>
+</body>
+
+</html>
