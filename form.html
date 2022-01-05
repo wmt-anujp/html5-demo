@@ -19,8 +19,7 @@
             width: 25vw;
         }
         
-        input,
-        select {
+        input {
             display: inline-block;
             margin-top: 16px;
             margin-left: 10px;
@@ -44,7 +43,7 @@
 
             <label for="LN">Last Name: </label>
             <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
-            <div>(test)</div>
+            <!-- <div>(test)</div> -->
 
             <!-- DOB starts -->
             <label for="DOB">Date of Birth: </label>
@@ -101,7 +100,7 @@
 
             <!-- Password starts -->
             <label for="password">Password: </label>
-            <input type="password" style="margin-left: 10px;width: 21.5%;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
 
             <label for="password">Re-type Password: </label>
             <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
