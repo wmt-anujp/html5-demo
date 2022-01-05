@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <link rel="icon" href="form.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form Page</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        
+        label {
+            display: inline-block;
+            text-align: right;
+            width: 25vw;
+        }
+        
+        input,
+        select {
+            display: inline-block;
+            margin-top: 16px;
+            margin-left: 10px;
+            width: 250px;
+        }
+        
+        .container-fluid {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
+        h4.contact {
+            margin-left: 10px;
+        }
+        
+        h4.personalinfo {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form>
+            <!-- Personal info starts -->
+            <h4 class="personalinfo">Personal Information</h4>
+            <label for="FN">First Name: </label>
+            <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+
+            <label for="LN">Last Name: </label>
+            <input style="width: 20%;" type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+
+            <!-- DOB starts -->
+            <label for="DOB">Date of Birth: </label>
+            <select style="margin-left: 8px;" name="Month" id="Month">
+                <option value="Month">Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+            </select>
+            <select style="margin: 10px;width: 5%;" name="Day" id="Day">
+                <option value="Day">Day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select style="margin: 10px;width: 5%;" name="Year" id="Year">
+                <option value="Year">Year</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+            </select>
+            <i style="font-size:22px" class="fa">&#xf059;</i><br>
+            <!-- DOB ends -->
+
+            <!-- Gender starts -->
+            <label for="Gender">Gender: </label>
+            <select name="Gender" id="Gender">
+                <option value="Choose a Gender">Choose a Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <i class="fa">&#xf059;</i><br>
+            <!-- Gender ends -->
+
+            <!-- Personal info ends -->
+            <!-- ---------------------------------------------------------------------------------------- -->
+            <!-- Account Information starts -->
+            <h4 class="heading">Account Information</h4>
+
+            <!-- Email starts -->
+            <label for="Email">Email: </label>
+            <input type="email" placeholder="(Your email will be your username)" required><br>
+
+            <label for="Email">Re-type Email: </label>
+            <input type="email" placeholder="(Your email will be your username)" required><br>
+            <!-- </div> -->
+            <!-- Email ends -->
+
+            <!-- Password starts -->
+            <label for="password">Password: </label>
+            <input type="password" style="margin-left: 10px;width: 21.5%;" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+
+            <label for="password">Re-type Password: </label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+    </div>
+    <!-- Password ends -->
+
+    <!-- Security Question starts -->
+    <label for="sq">Security Question: </label>
+    <select name="sq" id="sq">
+        <option value="security question">Choose a security Question</option>
+        <option value="maiden">What is your mother's maiden name</option>
+        <option value="favrorite place">Which is your favrorite place</option>
+    </select>
+    <i style="font-size:22px;margin-left: 10px;" class="fa">&#xf059;</i><br>
+
+    <label for="sa">Security Answer: </label>
+    <input type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="(Not Case-sensitive)"><br><br>
+    <!-- Security Question ends -->
+
+    <!-- Account Information ends -->
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- Contact Information starts -->
+    <h4 class="contact">Contact Information</h4>
+
+    <!-- Address starts -->
+    <label for="Address">Address: </label>
+    <input type="text" required><br>
+    <!-- Address ends -->
+
+    <!-- City starts -->
+    <label for="City">City: </label>
+    <input type="text" onkeypress="return (event.charCode>64 && event.charCode<91)|| (event.charCode>96 && event.charCode<123)" required><br>
+    <!-- City ends -->
+    <!-- State starts -->
+    <label for="State">State: </label>
+    <select name="State" id="State" required>
+        <option value="Choose a State">Choose a State</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Rajasthan">Rajasthan</option>
+    </select><br>
+    <!-- State ends -->
+
+    <!-- Zip code starts -->
+    <label for="ZC">Zip Code: </label>
+    <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" placeholder="Numeric only" type="text" maxlength="6">
+    <input type="text" placeholder="Optional" disabled><br>
+    <!-- Zip code ends -->
+
+    <!-- Phone Number starts -->
+    <label for="Phone">Phone: </label>
+    <input onkeypress="return (event.charCode > 47 && event.charCode < 58)" maxlength="11" placeholder="Numeric only">
+    <i class="fa ">&#xf059;</i>
+    <select name="Phone " id="Phone ">
+        <option value="Mobile ">Mobile</option>
+        <option value="Home ">Home</option>
+    </select>
+    <!-- Phone Number ends -->
+    <!-- Contact Information ends -->
+    </form>
+    </div>
+</body>
+
+</html>
