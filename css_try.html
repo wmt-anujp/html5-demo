@@ -21,10 +21,10 @@
             <!-- Personal info starts -->
             <h4 class="personalinfo">Personal Information</h4>
             <label for="FN">First Name:</label>
-            <input type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+            <input type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" placeholder="Enter Your Initial" required><br>
 
             <label for="LN">Last Name:</label>
-            <input type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required><br>
+            <input type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" placeholder="Enter Your Last Name" required><br>
 
             <!-- DOB starts -->
             <label for="DOB">Date of Birth:</label>
@@ -36,7 +36,7 @@
                 <option value="April">April</option>
                 <option value="May">May</option>
             </select>
-            <select class="dy" name="Day" id="Day">
+            <select class="dy" name="Day">
                 <option selected hidden>Day</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -44,7 +44,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <select style="margin: 10px;width: 5%;" name="Year" id="Year">
+            <select class="dy" name="Year">
                 <option selected hidden>Year</option>
                 <option value="2000">2000</option>
                 <option value="2001">2001</option>
@@ -72,24 +72,24 @@
 
             <!-- Email starts -->
             <label for="Email">Email: </label>
-            <input type="email" placeholder="(Your email is your username)" required><br>
+            <input type="email" placeholder="Your email is your username" required><br>
 
             <label for="Email">Re-type Email: </label>
-            <input type="email" placeholder="(Your email is your username)" required><br>
+            <input type="email" placeholder="Your email is your username" required><br>
             <!-- </div> -->
             <!-- Email ends -->
 
             <!-- Password starts -->
             <label for="password">Password: </label>
-            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters, 1 number, case-sensitive)"><br>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Min 8 characters, 1 number, case-sensitive"><br>
 
             <label for="password">Re-type Password: </label>
-            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="(Min 8 characters,1 number,Case-sensitive)"><br>
+            <input type="password" id="password" name="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Min 8 characters,1 number,Case-sensitive"><br>
             <!-- Password ends -->
 
             <!-- Security Question starts -->
             <label for="sq">Security Question: </label>
-            <select name="sq" class="dropdown">
+            <select name="sq" class="security">
                 <option selected hidden>Choose a security Question</option>
                 <option value="maiden">What is your mother's maiden name</option>
                 <option value="favrorite place">Which is your favrorite place</option>
@@ -99,7 +99,7 @@
 
             <!-- Security Answer starts -->
             <label for="sa">Security Answer: </label>
-            <input type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="(Not Case-sensitive)"><br>
+            <input type="text" onkeypress="return (event.charCode >96 && event.charCode<122) || (event.charCode>64 && event.charCode<91) " placeholder="Not Case-sensitive"><br>
             <!-- Security Answer ends -->
 
             <!-- Account Information ends -->

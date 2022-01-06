@@ -31,24 +31,44 @@ input {
 .dropdown:hover {
     color: #a64dff;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .dropdown {
     display: inline-block;
     margin-top: 16px;
     margin-left: 10px;
-    /* width: 200px; */
     border-radius: 10px;
 }
 
+.dy {
+    border-radius: 10px;
+    /* width: 20px; */
+}
+
 .dy:hover {
-    color: lightsalmon;
-    outline: none;
+    color: #a64dff;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 h4 {
     margin-left: 90px;
     color: lightgreen;
+}
+
+.security {
+    border-radius: 10px;
+    width: 320px;
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 10px;
+}
+
+.security:hover {
+    color: #a64dff;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 input[type="submit"] {
@@ -66,5 +86,5 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     color: maroon;
-    transition: 0.5s;
+    transition: 0.6s;
 }
