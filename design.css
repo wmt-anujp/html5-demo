@@ -38,12 +38,13 @@ input {
     display: inline-block;
     margin-top: 16px;
     margin-left: 10px;
-    border-radius: 10px;
+    border-radius: 18px;
+    height: 28px;
 }
 
 .dy {
-    border-radius: 10px;
-    /* width: 20px; */
+    border-radius: 18px;
+    height: 28px;
 }
 
 .dy:hover {
@@ -58,11 +59,13 @@ h4 {
 }
 
 .security {
-    border-radius: 10px;
-    width: 320px;
+    display: inline-block;
+    border-radius: 18px;
+    width: 330px;
     display: inline-block;
     margin-top: 16px;
     margin-left: 10px;
+    height: 30px;
 }
 
 .security:hover {
