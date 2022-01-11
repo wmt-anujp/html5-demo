@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<!-- <head>
     <style>
         div.gallery {
             margin: 5px;
@@ -54,10 +54,22 @@
             <img src="pexels.jpeg" alt="flower" width="600" height="400">
         </a>
         <div class="desc">Add a description of the image here</div>
-    </div>
+    </div> -->
 
+<head>
+    <style>
+        #borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(pexels.jpeg) round;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="borderimg">border-image: url(border.png) 30 round;</p>
 </body>
-
 
 <!-- <style>
         input[type=text],
