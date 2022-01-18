@@ -1,5 +1,5 @@
 body {
-    margin: 0
+    margin: 0px;
 }
 
 .main_container {
@@ -8,60 +8,54 @@ body {
 }
 
 .design_container {
-    border: 2px solid black;
-    height: 50px;
+    border: 3px solid black;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
+    height: 40px;
+    padding: 15px;
 }
 
 .flex_container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
+    height: 600px;
 }
 
 .one {
     display: flex;
-    height: 290px;
-    flex-grow: 1;
-    flex-basis: calc(40% - 10px);
     justify-content: center;
     background-color: lightblue;
-    /* align-content: center; */
-    /* align-items: center; */
+    width: 50%;
+    /* flex-grow: 1; */
+    /* flex-basis: calc(40% - 10px); */
 }
 
 .two {
     display: flex;
-    height: 290px;
-    flex-grow: 1;
-    flex-basis: calc(40% - 10px);
     justify-content: center;
     background-color: lightgreen;
-    /* align-content: center; */
-    /* align-items: center; */
+    width: 50%;
+    /* flex-grow: 1;
+    flex-basis: calc(40% - 10px); */
 }
 
 .three {
     display: flex;
-    height: 290px;
-    flex-grow: 1;
-    flex-basis: calc(40% - 10px);
     justify-content: center;
     background-color: lightyellow;
-    /* align-content: center; */
-    /* align-items: center; */
+    width: 50%;
+    /* flex-grow: 1;
+    flex-basis: calc(40% - 10px); */
 }
 
 .four {
     display: flex;
-    height: 290px;
-    flex-grow: 1;
-    flex-basis: calc(40% - 10px);
     justify-content: center;
     background-color: lightpink;
-    /* align-content: center; */
-    /* align-items: center; */
+    width: 50%;
+    /* flex-grow: 1;
+    flex-basis: calc(40% - 10px); */
 }
 
 .childbox1 {
