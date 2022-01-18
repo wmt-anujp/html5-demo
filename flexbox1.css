@@ -19,32 +19,36 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 600px;
+    height: 700px;
 }
 
 .one {
     display: flex;
     justify-content: center;
     background-color: lightblue;
-    width: 50%;
+    height: 50%;
+    flex-basis: 50%;
     /* flex-grow: 1; */
     /* flex-basis: calc(40% - 10px); */
 }
 
 .two {
     display: flex;
-    justify-content: center;
     background-color: lightgreen;
-    width: 50%;
-    /* flex-grow: 1;
-    flex-basis: calc(40% - 10px); */
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    /* height: 50%; */
+    /* flex-grow: 1; */
+    /* flex-basis: calc(50% - 500px); */
 }
 
 .three {
     display: flex;
     justify-content: center;
-    background-color: lightyellow;
-    width: 50%;
+    background-color: #FFF2CC;
+    flex-basis: 50%;
+    height: 50%;
     /* flex-grow: 1;
     flex-basis: calc(40% - 10px); */
 }
@@ -52,56 +56,103 @@ body {
 .four {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: lightpink;
-    width: 50%;
+    flex-basis: 50%;
+    height: 50%;
     /* flex-grow: 1;
     flex-basis: calc(40% - 10px); */
 }
 
 .childbox1 {
-    width: 40px;
-    height: 40px;
+    display: flex;
+    justify-content: center;
     background-color: blue;
-    /* align-self: flex-start; */
-    padding: 15px;
+    font-size: 25px;
     color: white;
-    font-size: 20px;
     text-align: center;
+    height: 30px;
+    padding: 15px;
 }
 
 .childbox2 {
-    width: 450px;
-    height: 70px;
-    padding: 50px;
-    background-color: lightgoldenrodyellow;
-    margin: 40px;
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    background-color: #FFF2CC;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin: 100px;
 }
 
 .childbox3 {
-    width: 60px;
-    height: 60px;
+    display: flex;
+    justify-content: center;
     background-color: blue;
-    padding: 10px;
-    margin: 10px;
+    font-size: 25px;
     color: white;
+    text-align: center;
+    height: 30px;
+    padding: 15px;
     align-self: flex-end;
 }
 
 .childbox4 {
-    width: 60px;
-    height: 60px;
     background-color: blue;
-    padding: 10px;
+    font-size: 25px;
     color: white;
+    text-align: center;
+    height: 30px;
+    padding: 15px;
 }
 
-@media only screen and (max-width: 800px) {
+.number1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.number2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.number3 {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.number4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+@media only screen and (max-width: 768px) {
     .parent {
         display: flex;
         flex-direction: column;
-        flex: 100%;
-        flex-wrap: nowrap;
-        height: 600px;
+        /* flex: 100%; */
+        flex-wrap: wrap;
+        /* height: 600px; */
     }
 }
