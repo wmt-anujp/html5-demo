@@ -6,114 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
-    <style>
-        body {
-            margin: 0px;
-        }
-        
-        .main_container {
-            height: 100%;
-            width: 100%;
-        }
-        
-        .design_container {
-            border: 2px solid black;
-            text-align: center;
-            height: 40px;
-            font-size: 35px;
-            padding: 15px;
-        }
-        
-        .flex-container {
-            display: flex;
-            border: 2px solid black;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        
-        .flex-container>div {
-            display: flex;
-            background-color: #f1f1f1;
-            padding: 20px;
-            font-size: 30px;
-            width: 640px;
-            height: 300px;
-        }
-        
-        .one {
-            /* justify-content: center; */
-            height: 100px;
-            background-color: rgb(7, 92, 145);
-            /* padding: 25px; */
-        }
-        
-        #childbox1 {
-            justify-content: center;
-            border: 2px solid blue;
-            background-color: blue;
-            padding: 20px;
-            color: white;
-            height: 40px;
-            /* width: 700px; */
-        }
-        
-        #number1 {
-            text-align: center;
-        }
-        
-        .outermargin {
-            border: 2px solid lightyellow;
-            padding: 40px;
-            margin: 25px;
-            background-color: #FFF2CC;
-            text-align: center;
-            color: black;
-        }
-        
-        #number2 {
-            position: relative;
-            top: -20px;
-            /* border: none; */
-            text-align: center;
-        }
-        
-        @media only screen and (max-width: 800px) {
-            .flex-container {
-                display: flex;
-                flex-direction: column;
-                flex: 100%;
-                flex-wrap: nowrap;
-                height: 600px;
-            }
-        }
-    </style>
+    <link rel="icon" href="flexbox.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="flexbox1.css">
 </head>
 
 <body>
     <div class="main_container">
         <div class="design_container">Design 1</div>
 
-        <div class="flex-container">
+        <div class="flex_container">
 
-            <div class="one" style="background-color: lightblue;">
-                <div id="childbox1">Child</div>
-                <div id="number1">1</div>
+            <div class="one">
+                <div class="childbox1">Child</div>
+                <div class="number1">1</div>
             </div>
 
-            <div class="two" style="background-color: lightgreen;">
-                <div id="number2">2</div>
-                <div class="outermargin">View outer margin should be same on all sides</div>
+            <div class="two">
+                <div class="childbox2">View outer margin should be same on all sides</div>
             </div>
 
-            <!-- <div class="three">
-            <div class="childbox">Child</div>
-            <div id="number3">3</div>
-        </div>
+            <div class="three">
+                <div class="childbox3">Child</div>
+                <div class="number3">3</div>
+            </div>
 
-        <div class="four">
-            <div class="childbox">Child</div>
-            <div id="number4">4</div>
-        </div>-->
+            <div class="four">
+                <div class="childbox4">Child</div>
+                <div class="number4">4</div>
+            </div>
         </div>
     </div>
 </body>
