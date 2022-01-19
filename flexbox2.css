@@ -113,8 +113,15 @@ input[type=button] {
     padding: 20px;
     margin: 20px;
     width: 25px;
+}
+
+.box3 {
+    border: 2px solid red;
+    background-color: lightblue;
+    padding: 20px;
+    width: 25px;
+    margin: 20px;
     display: flex;
-    justify-content: flex-start;
 }
 
 .box2 {
@@ -127,15 +134,6 @@ input[type=button] {
     justify-content: flex-end;
 }
 
-.box3 {
-    border: 2px solid red;
-    background-color: lightblue;
-    padding: 20px;
-    width: 25px;
-    margin: 20px;
-    display: flex;
-}
-
 .box4 {
     border: 2px solid red;
     background-color: lightblue;
@@ -145,6 +143,14 @@ input[type=button] {
     display: flex;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .right {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
