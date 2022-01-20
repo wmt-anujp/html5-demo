@@ -39,3 +39,4 @@ console.log("Dataype is:" + typeof date);
 
 let firstName;
 console.log(firstName);
+console.log(typeof firstName);
