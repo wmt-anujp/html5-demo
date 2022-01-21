@@ -40,3 +40,14 @@ console.log("Dataype is:" + typeof date);
 let firstName;
 console.log(firstName);
 console.log(typeof firstName);
+
+var n = 2;
+
+function square(num) {
+    var ans = num * num;
+    return ans;
+}
+var square2 = square(n);
+var square = square(4);
+
+console.log(square2)
