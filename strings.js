@@ -1,5 +1,5 @@
 const firstName = "Anuj";
-// let stringVariable = "<h1>This is heading</h1>" + "<p>This is paragraph</p>";
+let stringVariable = "<h1>This is heading</h1>" + "<p>This is paragraph</p>";
 
 // stringVariable=stringVariable.concat("anuj"," ","panchal");
 // console.log(stringVariable);
@@ -17,12 +17,12 @@ const firstName = "Anuj";
 // console.log(stringVariable.slice(0, 7));
 // console.log(stringVariable.split('>'));
 // console.log(stringVariable.replace("heading", "anuj"));
-
+// console.log(stringVariable.startsWith("This"));
+// console.log(stringVariable.match(/heading/g))
+// console.log(stringVariable.endsWith("</p>"));
 
 let fruit1 = "orange";
 let fruit2 = "apple";
-let string = `Hello ${firstName}
-    <h1> This is heading </h1>
-    <p> I like ${fruit1} and ${fruit2}`;
+let string = `<p> I like ${fruit1} and ${fruit2}`;
 
-document.body.innerHTML = string;
+console.log(string);
