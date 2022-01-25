@@ -1,5 +1,5 @@
 const firstName = "Anuj";
-let stringVariable = "<h1>This is heading</h1>" + "<p>This is paragraph</p>";
+// let stringVariable = "<h1>This is heading</h1>" + "<p>This is paragraph</p>";
 
 // stringVariable=stringVariable.concat("anuj"," ","panchal");
 // console.log(stringVariable);
@@ -21,9 +21,8 @@ let stringVariable = "<h1>This is heading</h1>" + "<p>This is paragraph</p>";
 
 let fruit1 = "orange";
 let fruit2 = "apple";
-let wholestring = `Hello ${firstName}
+let string = `Hello ${firstName}
     <h1> This is heading </h1>
-    <p> I like ${fruit1} and ${fruit2}
-`;
+    <p> I like ${fruit1} and ${fruit2}`;
 
-document.body.innerHTML = wholestring;
+document.body.innerHTML = string;
