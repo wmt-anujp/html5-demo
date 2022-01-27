@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="events.js"></script> -->
-    <!-- <script src="strings.js"></script> -->
+    <script src="events.js"></script>
+    <script src="strings.js"></script>
     <script src="array.js"></script>
 </head>
 
-<body>
-    <!-- <button onclick="displayDate()">The time is?</button> -->
+<body> -->
+<!-- <button onclick="displayDate()">The time is?</button> -->
 
 
-    <!-- <select id="eventuse" onchange="changing()" style="height: 50px;width: 200px;">
+<!-- <select id="eventuse" onchange="changing()" style="height: 50px;width: 200px;">
         <option value="Kia">Kia</option>
         <option value="Jaguar">Jaguar</option>
         <option value="Hyundai">Hyundai</option>
@@ -24,11 +24,41 @@
 
     <p id="demo" style="font-size: 20px;"></p> -->
 
-    <!-- <img onmouseover="bigImg(this)" onmouseout="originalImg(this)" src="tree.jpg" width="100px" height="100px"> -->
+<!-- <img onmouseover="bigImg(this)" onmouseout="originalImg(this)" src="tree.jpg" width="100px" height="100px"> -->
 
-    <!-- <input type="text" onkeydown="keyfunction()">
+<!-- <input type="text" onkeydown="keyfunction()">
     <input type="text" onkeyup="keyfunction()">
     <input type="text" onkeypress="keyfunction()"> -->
+<!-- </body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let myNumber = 4;
+        let txt = "";
+        while (myNumber != Infinity) {
+            console.log("loop started")
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+            console.log("my number", myNumber)
+        }
+        console.log("before html set")
+        document.getElementById("demo").innerHTML = "hello" + txt;
+    </script>
+
 </body>
 
 </html>
+
+<!-- Date:27/01/2022
+Project: WMT Training
+-learnt and implemented following
+ -array sorting, iteration
+-random, dates, conditions, switch, for, while -->
