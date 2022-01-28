@@ -37,3 +37,7 @@ const numbers = [34, 23, 12, 56, 78];
 numbers.forEach((item, index, arr) => {
     console.log('a[' + index + ']=' + item);
 })
+
+for (const n of numbers) {
+    console.log(n);
+}
