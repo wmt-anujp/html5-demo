@@ -89,11 +89,13 @@ document.addEventListener("drop", function(event) {
 
 <script>
 let myNumber = 4; 
-let txt = "";
+let txt = 0;
 while (myNumber != Infinity) {
    myNumber = myNumber * myNumber;
-   txt = txt + myNumber + "<br>";
+   console.log("txt",txt);
+   txt = txt + myNumber;
 }
+console.log("asas");
 document.getElementById("demo").innerHTML = txt;
 </script>
 
