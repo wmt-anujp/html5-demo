@@ -37,7 +37,7 @@ let date = new Date();
 console.log(date);
 console.log("Dataype is:" + typeof date);
 
-let firstName;
+let firstname;
 console.log(firstName);
 console.log(typeof firstName);
 
