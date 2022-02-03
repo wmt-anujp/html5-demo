@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <p id="para3"></p>
+    <script>
+        let currentDate=new Date();
+        console.log(currentDate);
+        let date=currentDate.getDate();
+        console.log(date);
+        let month=currentDate.getMonth()+1;
+        console.log(month);
+        let year=currentDate.getFullYear();
+        console.log(year);
+
+        document.getElementById("para1").innerHTML="Format of 1st Paragraph: "+ month+"-"+date+"-"+year;
+        $(document).ready(function() {
+        // let finaldate= $("#para1");
+            $("para1").text("Format 1 of Para-1:"+ date+"-"+month+"-"+year).innerHTML;
+        });
+    </script>
+</body>
+</html>
