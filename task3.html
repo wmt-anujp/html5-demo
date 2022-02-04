@@ -11,7 +11,7 @@
     <p id="para1"></p>
     <p id="para2"></p>
     <p id="para3"></p>
-    <p id="para3"></p>
+    <p id="para4"></p>
     <script>
         let currentDate=new Date();
         console.log(currentDate);
@@ -22,10 +22,12 @@
         let year=currentDate.getFullYear();
         console.log(year);
 
-        document.getElementById("para1").innerHTML="Format of 1st Paragraph: "+ month+"-"+date+"-"+year;
+        document.getElementById("para1").innerHTML="Format of 1st Paragraph: "+ date+"-"+month+"-"+year;
+        document.getElementById("para2").innerHTML="Format of 2nd Paragraph: "+ date+"/"+month+"/"+year;
+
         $(document).ready(function() {
         // let finaldate= $("#para1");
-            $("para1").text("Format 1 of Para-1:"+ date+"-"+month+"-"+year).innerHTML;
+            $("para1").text("Format 1 of Para-1:"+ (date+"-"+month+"-"+year).innerHTML); 
         });
     </script>
 </body>

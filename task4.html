@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+</head>
+
+<body>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <script>
+        let student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+        // var stringObj = JSON.stringify(student);
+        document.getElementById("para1").innerHTML = "Before Deleting Object Property: "+JSON.stringify(student);
+        
+        delete student.rollno;
+        document.getElementById("para2").innerHTML = "After Deleting Object Property: "+JSON.stringify(student);
+    </script>
+</body>
+
+</html>
