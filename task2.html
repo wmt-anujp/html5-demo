@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+    <script>
+        let currentDate = new Date();
+        let date = currentDate.getDate();
+        let hours = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        let seconds = currentDate.getSeconds();
+        let day = currentDate.getDay();
+
+        console.log(currentDate);
+        console.log(date);
+        console.log(hours);
+        console.log(minutes);
+        console.log(seconds);
+        console.log(day);
+
+
+        if (day === 1) {
+            day = "Monday";
+        } else if (day === 2) {
+            day = "Tuesday";
+        } else if (day === 3) {
+            day = "Wednesday";
+        } else if (day === 4) {
+            day = "Thursday";
+        } else if (day === 5) {
+            day = "Friday";
+        } else if (day === 6) {
+            day = "Saturday";
+        } else if (day === 7) {
+            day = "Sunday";
+        }
+
+        if (hours < 10 || hours > 12) {
+            hours = hours - 12;
+            hours = "0" + hours;
+        } if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        document.getElementById("para1").innerHTML = "Today is: " + day;
+        document.getElementById("para2").innerHTML = "Current Time is: " + hours + " PM" + " : " + minutes + " : " + seconds;
+        // Fri Feb 04 2022 16:47:58 GMT+0530 (India Standard Time)
+    </script>
+</body>
+
+</html>
