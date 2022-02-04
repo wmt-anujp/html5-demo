@@ -80,6 +80,8 @@ document.addEventListener("drop", function(event) {
 
 </body>
 </html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,6 +107,22 @@ document.addEventListener("drop", function(event) {
     console.log("asas");
     document.getElementById("demo").innerHTML = txt;
   </script>
+  <!-- ----------------- -->
+  <script>
+    let string1 = "ThE QuIcK BrOwN FoX";
+    document.getElementById("demo1").innerHTML = "<b>Before Character Swapping: </b>" + string1;
+    let new_string;
+    for (i = 0; i < string1.length; i++) {
+      if (string1[i] === string1[i].toLowerCase()) {
+        new_string += string1[i].toUpperCase();
+      } else {
+        new_string += string1[i].toLowerCase();
+      }
+    }
+
+    document.getElementById("demo2").innerHTML = "<b>After Character Swapping: </b>" + new_string;
+  </script>
+
 </body>
 
 </html>
