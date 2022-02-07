@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+
+<body>
+    <!-- <h6 id="heading">AP panchal</h6>
+    <h2 id="navigation1"></h2>
+    <h2 id="navigation2"></h2>
+    <h2 id="navigation3"></h2>
+
+    <script>
+        // document.getElementById("navigation1").innerHTML = document.getElementById("heading").innerHTML;
+        document.getElementById("navigation2").innerHTML = document.getElementById("heading").firstChild.nodeName;
+        document.getElementById("navigation3").innerHTML = document.getElementById("heading").childNodes[0].nodeValue;
+    </script> -->
+
+
+    <div id="parent">
+        <h1 id="heading1">This is heading-1</h1>
+        <p id="para">This is paragraph</p>
+        <h3 id="heading3">Anuj Panchal</h3>
+    </div>
+
+    <script>
+        // let id = document.getElementById("parent");
+        let firstelement = document.getElementById("heading3").firstChild.nodeValue;
+        console.log(firstelement);
+    </script>
+</body>
+
+</html>
+
+<!-- Date: 07/02/2022
+Project:WMT Training
+-completed the DOM events and addeventlistener task
+-read and almost completed navigations -->
