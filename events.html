@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Task</title>
+</head>
+
+<body>
+    <!-- Onclick event -->
+    <h2>Onclick Click Event</h2>
+    <p id="onclick_demo"></p>
+    <button onclick="displayDate()">Click here for time</button>
+
+    <h5 id="textchange" onclick="changeText(this)">Click to change text</h5>
+    <script>
+        function displayDate() {
+            document.getElementById("onclick_demo").innerHTML = Date();
+        }
+
+        function changeText() {
+            document.getElementById("textchange").innerHTML = "Hello Anuj";
+        }
+    </script>
+
+    <!-- Onload Event -->
+    <script>
+        function loadFunction() {
+            alert("Page was Loaded");
+        }
+    </script>
+
+    <!-- Onchange event -->
+    <h2>Onchange Event</h2>
+    <p id="onchangedemo"></p>
+    <select id="changes" onchange="changing()" style="height: 20px;width: 100px;">
+        <option value="Hyundai">Hyundai</option>
+        <option value="Kia">Kia</option>
+        <option value="Jaguar">Jaguar</option>
+        <option value="Honda">Honda</option>
+    </select>
+    <script>
+        function changing() {
+            var x = document.getElementById("changes").value;
+            document.getElementById("onchangedemo").innerHTML =
+                "You have selected: " + x;
+        }
+    </script>
+
+    <!-- OnmouseOver And OnmouseOut Event -->
+    <h2>OnmouseOver & Onmouseout Event</h2>
+    <img onmouseover="bigImg(this)" onmouseout="originalImg(this)" src="tree.jpg" width="200px" height="150px">
+    <script>
+        function bigImg(x) {
+            x.style.height = "200px";
+            x.style.width = "300px";
+        }
+
+        function originalImg(x) {
+            x.style.height = "150px";
+            x.style.width = "200px";
+        }
+    </script>
+
+    <!-- Onmousedown, Onmouseup Events -->
+    <h2>Onmousedown, Onmouseup Events</h2>
+    <div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)"
+        style="background-color:grey;width:90px;padding:40px;text-align: center;" id="mouseEvent">Click Me</div>
+    <script>
+        function mouseDown() {
+            document.getElementById("mouseEvent").innerHTML = "Release Me";
+            document.getElementById("mouseEvent").style.backgroundColor = "lightblue";
+        }
+        function mouseUp() {
+            document.getElementById("mouseEvent").innerHTML = "Thank You";
+            document.getElementById("mouseEvent").style.backgroundColor = "grey";
+        }
+    </script>
+
+    <!-- Onkeydown, Onkeyup, Onkeypress Events -->
+    <h2>Onkeydown, Onkeyup, Onkeypress Events</h2>
+    Enter Anything:<input type="text" onkeydown="keyfunction()" placeholder="KeyDown">
+    <input type="text" onkeyup="keyfunction()" placeholder="KeyUp">
+    <input type="text" onkeypress="keyfunction()" placeholder="KeyPress">
+    <script>
+        function keyfunction() {
+            alert("You pressed some key from keyboard");
+        }
+    </script>
+</body>
+
+</html>
