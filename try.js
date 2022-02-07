@@ -1,36 +1,30 @@
 var city = "Delhi";
-console.log(city)
+console.log(city);
 
 const ownerName = "Anuj Panchal";
-console.log(ownerName)
+console.log(ownerName);
 
 {
-    // let city = "Ahmedabad";
-    // city = "Surat";
-    console.log(city);
+  // let city = "Ahmedabad";
+  // city = "Surat";
+  console.log(city);
 }
-
 
 let nullVar = null;
-console.log("Datatype is: " + (typeof(nullVar)));
+console.log("Datatype is: " + typeof nullVar);
 
 let myArr = [1, 2, 3, 4, false, "string"];
-console.log("Datatype is: " + (typeof(myArr)) + " " + myArr);
-
-
+console.log("Datatype is: " + typeof myArr + " " + myArr);
 
 let studentMarks = {
-    "anuj panchal": 85,
-    chirag: 78,
-    janaki: 67
-}
+  "anuj panchal": 85,
+  chirag: 78,
+  janaki: 67,
+};
 console.log(studentMarks);
-console.log("dataype is: " + (typeof studentMarks));
+console.log("dataype is: " + typeof studentMarks);
 
-
-function findName() {
-
-}
+function findName() {}
 console.log("Dataype is:" + typeof findName);
 
 let date = new Date();
@@ -44,10 +38,10 @@ console.log(typeof firstName);
 var n = 2;
 
 function square(num) {
-    var ans = num * num;
-    return ans;
+  var ans = num * num;
+  return ans;
 }
 var square2 = square(n);
 var square = square(4);
 
-console.log(square2)
+console.log(square2);
