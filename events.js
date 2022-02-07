@@ -1,13 +1,13 @@
 // onclick
-
 function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
+  document.getElementById("onclick_demo").innerHTML = Date();
 }
 
 // onchange
 function changing() {
-  var x = document.getElementById("eventuse").value;
-  document.getElementById("demo").innerHTML = "You have selected: " + x;
+  var x = document.getElementById("changes").value;
+  document.getElementById("onchange_demo").innerHTML =
+    "You have selected: " + x;
 }
 
 // onmouseover & onmouseout

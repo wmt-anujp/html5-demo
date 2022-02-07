@@ -6,86 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trial</title>
-<!-- <script src="events.js"></script>
-    <script src="strings.js"></script> -->
-<!-- <script src="array.js"></script> -->
-<!-- <script src="constructor.js"></script> -->
+    <script src="events.js"></script>
+    <!-- <script src="strings.js"></script> -->
+    <!-- <script src="array.js"></script> -->
+    <!-- <script src="constructor.js"></script> -->
 </head>
 
-<!-- <body> -->
-<!-- <button onclick="displayDate()">The time is?</button>
+<body>
 
+    <!-- onclick event -->
+    <p>Onclick Click Event</p>
+    <p id="onclick_demo"></p>
+    <button onclick="displayDate()">Click here for time</button>
 
-    <select id="eventuse" onchange="changing()" style="height: 50px;width: 200px;">
+    <!-- onchange -->
+    <p>Onchange Event</p>
+    <p id="onchange_demo"></p>
+    <select id="changes" onchange="changing()" style="height: 20px;width: 100px;">
+        <option value="Hyundai">Hyundai</option>
         <option value="Kia">Kia</option>
         <option value="Jaguar">Jaguar</option>
-        <option value="Hyundai">Hyundai</option>
         <option value="Honda">Honda</option>
     </select>
 
-    <p id="demo" style="font-size: 20px;"></p>
+    <!-- <p id="demo" style="font-size: 20px;"></p> -->
 
-    <img onmouseover="bigImg(this)" onmouseout="originalImg(this)" src="tree.jpg" width="100px" height="100px"> -->
+    <!-- <img onmouseover="bigImg(this)" onmouseout="originalImg(this)" src="tree.jpg" width="100px" height="100px"> -->
 
-<!-- <input type="text" onkeydown="keyfunction()">
+    <!-- <input type="text" onkeydown="keyfunction()">
     <input type="text" onkeyup="keyfunction()">
     <input type="text" onkeypress="keyfunction()"> -->
-<!-- </body>
 
-</html> -->
-
-
-
-<!--<p id="demo"></p>
-
-    <script>
-        let myNumber = 4;
-        let txt = "";
-        while (myNumber != Infinity) {
-            console.log("loop started")
-            myNumber = myNumber * myNumber;
-            txt = txt + myNumber + "<br>";
-            console.log("my number", myNumber)
-        }
-        console.log("before html set")
-        document.getElementById("demo").innerHTML = "hello" + txt;
-    </script>-->
-
-
-<body>
-    <h2>Current Day and Time</h2>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
-    <script>
-        var today = new Date();
-        var d = today.getDay();
-        var days = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
-        document.getElementById("demo1").innerHTML = "<b>Today is :</b> " + days[d];
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        var pmam = (h >= 12) ? " PM " : " AM ";
-        h = (h >= 12) ? h - 12 : h;
-        if (h === 0 && pmam === ' PM ') {
-            if (m === 0 && s === 0) {
-                h = 12;
-                pmam = ' Noon';
-            } else {
-                h = 12;
-                pmam = ' PM';
-            }
-        }
-        if (h === 0 && pmam === ' AM ') {
-            if (m === 0 && s === 0) {
-                h = 12;
-                pmam = ' Midnight';
-            } else {
-                h = 12;
-                pmam = ' AM';
-            }
-        }
-        document.getElementById("demo2").innerHTML = "<b>Current Time :</b> " + h + pmam + " : " + m + " : " + s;
-    </script>
 </body>
 
 </html>
+<!-- <script>
+    let myNumber = 4;
+    let txt = "";
+    while (myNumber != Infinity) {
+        console.log("loop started")
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+        console.log("my number", myNumber)
+    }
+    console.log("before html set")
+    document.getElementById("demo").innerHTML = "hello" + txt;
+</script> -->
