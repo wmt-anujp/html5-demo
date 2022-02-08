@@ -21,22 +21,182 @@
     </script> -->
 
 
-    <div id="parent">
-        <h1 id="heading1">This is heading-1</h1>
-        <p id="para">This is paragraph</p>
-        <h3 id="heading3">Anuj Panchal</h3>
+    <!-- First Child -->
+    <h1 style="color: green;">First Child</h1>
+    <div id="div1">
+        <h1 id="title1"></h1>
+        <h3>AAP</h3>
+        <p id="content1">react</p>
     </div>
 
     <script>
-        // let id = document.getElementById("parent");
-        let firstelement = document.getElementById("heading3").firstChild.nodeValue;
-        console.log(firstelement);
+        const display = document.getElementById("div1");
+        const firstchild = display.firstChild.nodeName;
+        console.log("FirstChild Down");
+        console.log(firstchild);
+    </script>
+
+    <!-- First element child -->
+    <h1 style="color: green;">First Element Child</h1>
+    <div id="div2">
+        <h2 id="title2">This is heading</h2>
+        <p id="content2">This is paragraph</p>
+    </div>
+
+    <script>
+        var element = document.getElementById("div2");
+        var firstelementchild = element.firstElementChild.nodeName;
+        console.log("FirstElementChild Down");
+        console.log(firstelementchild);
+    </script>
+
+    <!-- Last child -->
+    <h1 style="color: green;">Last Child</h1>
+    <div id="div3">
+        <h2 id="title3">This is heading</h2>
+        <p id="content3">This is paragraph</p>
+    </div>
+
+    <script>
+        var element = document.getElementById("div3");
+        var lastchild = element.lastChild.nodeName;
+        console.log("LastChild Down");
+        console.log(lastchild);
+    </script>
+
+    <!-- last element child -->
+    <h1 style="color: green;">Last Element Child</h1>
+    <div id="div4">
+        <h2 id="title4">This is heading</h2>
+        <p id="content4">This is paragraph</p>
+    </div>
+
+    <script>
+        var element = document.getElementById("div4");
+        var lastElementchild = element.lastElementChild.nodeName;
+        console.log("LastElementChild Down");
+        console.log(lastElementchild);
+    </script>
+
+    <!-- Child Nodes -->
+    <h1 style="color: green;">Child Nodes</h1>
+    <div id="div5">
+        <h2 id="title5">This is heading</h2>
+        <p id="content5">This is paragraph</p>
+        <a href="">link</a>
+    </div>
+
+    <script>
+        console.log("ChildNodes Down");
+        const id = document.getElementById("div5");
+        for (let i = 0; i < id.childNodes.length; i++) {
+            console.log(element.childNodes[i]);
+        }
+    </script>
+
+    <!-- Children -->
+    <h1 style="color: green;">Children</h1>
+    <div id="div6">
+        <h2 id="title6">This is heading</h2>
+        <p id="content6">This is paragraph</p>
+        <img src="" alt="">
+        <a href="">Link</a>
+        <h4></h4>
+    </div>
+
+    <script>
+        console.log("Children Down");
+        const some = document.getElementById("div6");
+        for (let i = 0; i < some.children.length; i++) {
+            console.log(some.children[i]);
+        }
+    </script>
+
+    <!-- Parent Node -->
+    <h1 style="color: green;">Parent Node</h1>
+    <div id="div7">
+        <h2 id="title7">This is heading</h2>
+        <p id="content7">This is paragraph</p>
+        <a href="">Link</a>
+    </div>
+
+    <script>
+        console.log("Parent Node Down");
+        const some1 = document.getElementById("div7");
+        const parent1 = some1.parentNode.nodeName;
+        console.log("Parent name - " + parent1);
+    </script>
+
+    <!-- ParentElement -->
+    <h1 style="color: green;">Parent Element</h1>
+    <div>
+        <h2 id="title8">This is heading</h2>
+        <p id="content8">This is paragraph</p>
+        <a href="">link</a>
+    </div>
+
+    <script>
+        console.log("Parent Element Down");
+        const some2 = document.getElementById("title8");
+        const parent2 = some2.parentElement.nodeName;
+        console.log(parent2);
+
+        // parentNode vs parentElement
+        console.log(document.documentElement.parentNode);
+        console.log(document.documentElement.parentElement);
+    </script>
+
+    <!-- Next Sibling -->
+    <h1 style="color: green;">Next Sibling</h1>
+    <h2 id="title9">This is heading</h2>
+    <p id="content9">This is paragraph</p>
+    <a href="">Link</a>
+
+    <script>
+        console.log("Next Sibling Down");
+        const some3 = document.getElementById("title9");
+        const next = some3.nextSibling.nodeName;
+        console.log(next);
+    </script>
+
+    <!-- Next Element Sibling -->
+    <h1 style="color: green;">Next Element Sibling</h1>
+    <h2 id="title10">This is heading</h2>
+    <p id="content10">This is paragraph</p>
+    <a href="">Link</a>
+
+    <script>
+        console.log("Next Element Down");
+        var some4 = document.getElementById("title10");
+        var nextelement = some4.nextElementSibling.nodeName;
+        console.log("Next Sibling Element: " + nextelement);
+    </script>
+
+    <!-- Previous Sibling -->
+    <h1 style="color: green;">Previous Sibling</h1>
+    <h2 id="title11">This is heading</h2>
+    <p id="content11">This is paragraph</p>
+    <a href="">Link</a>
+
+    <script>
+        console.log("Previous Sibling Down");
+        var element = document.getElementById("content11");
+        var previousnode = element.previousSibling.nodeName;
+        console.log(previousnode);
+    </script>
+
+    <!-- Previous Element Sibling -->
+    <h1 style="color: green;">Previous Element Sibling</h1>
+    <h2 id="title12">This is heading</h2>
+    <p id="content12">This is paragraph</p>
+    <a href="">Link</a>
+
+    <script>
+        console.log("Previous Element Sibling Down");
+        var element = document.getElementById("content12");
+        var previouselement = element.previousElementSibling.nodeName;
+        console.log(previouselement);
     </script>
 </body>
 
 </html>
-
-<!-- Date: 07/02/2022
-Project:WMT Training
--completed the DOM events and addeventlistener task
--read and almost completed navigations -->
