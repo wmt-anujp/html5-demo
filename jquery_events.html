@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h2 style="color: green;">Jquery Events</h2>
+    <div id="para1">First Paragraph</div>
+    <p id="para2">Second Paragraph</p>
+    <p id="para3">Third Paragraph</p>
+    <p id="para4">Fourth Paragraph</p>
+    <p id="para5">Fifth Paragraph</p>
+
+    Name: <input type="text" name="fullname"><br><br>
+    Email: <input type="text" name="email">
+
+    <script>
+        // Click me to disappear
+        // $(document).ready(function () {
+        //     $("h2").click(function () {
+        //         $(this).hide();
+        //     });
+        // });
+
+        // Double click
+        // $(document).ready(function () {
+        //     $("p").dblclick(function () {
+        //         $(this).hide();
+        //     });
+        // });
+
+        // mouseEnter
+        // $(document).ready(function () {
+        //     $("#para1").mouseenter(function () {
+        //         alert("Mouse entered first paragraph");
+        //     });
+        // });
+
+        // Mouse leave
+        // $(document).ready(function () {
+        //     $("#para2").mouseleave(function () {
+        //         alert("Bye! You left p2!");
+        //     });
+        // });
+
+        // Mouse down
+        // $(document).ready(function () {
+        //     $("#para3").mouseleave(function () {
+        //         alert("Mouse down in 3rd paragraph!");
+        //     });
+        // });
+
+        // Mouse up
+        // $(document).ready(function () {
+        //     $("#para4").mouseup(function () {
+        //         alert("Mouse up in 4th paragraph");
+        //     });
+        // });
+
+        // Hover
+        // $(document).ready(function () {
+        //     $("#para5").hover(function () {
+        //         alert("Entered on 5th para");
+        //     }, function () {
+        //         alert("You left 5th para");
+        //     });
+        // });
+
+        // Focus and blur
+        $(document).ready(function () {
+            $("input").on({
+                focus: function () {
+                    $(this).css("background-color", "lightgreen");
+                },
+                blur: function () {
+                    $(this).css("background-color", "grey");
+                }
+            });
+        });
+
+        // on event
+        $(document).ready(function () {
+            $("p").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgrey");
+                },
+                mouseout: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "green");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
