@@ -6,10 +6,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Hide all P tags
+        $(document).ready(function () {
+            $("#hidden").click(function () {
+                $("p").hide();
+            });
+        });
+
+        // Show all P tags
+        $(document).ready(function () {
+            $("#visible").click(function () {
+                $("p").show();
+            });
+        });
+
+        // Hide all content
+        $(document).ready(function () {
+            $("#hideall").click(function () {
+                $("*").hide();
+            });
+        });
+
+        // Hide this button
+        $(document).ready(function () {
+            $("#hidebtn").click(function () {
+                $(this).hide();
+            });
+        });
+
+        // Hide Para1
+        $(document).ready(function () {
+            $("#hidepara1").click(function () {
+                $("p.para1").hide();
+            });
+        });
+
+        // Hide First and last para
+        $(document).ready(function () {
+            $("#firstpara").click(function () {
+                $("p:first").hide();
+            });
+        });
+        $(document).ready(function () {
+            $("#lastpara").click(function () {
+                $("p:last").hide();
+            });
+        });
+
+        // Hide unordered list
+        $(document).ready(function () {
+            $("#orderlist").click(function () {
+                $("ul:last li:first").hide();
+            });
+        });
+
+        // ul first child
+        $(document).ready(function () {
+            $("#unorderlist").click(function () {
+                $("ul li:first-child").hide();
+            });
+        });
+
+        // HREF
+        $(document).ready(function () {
+            $("#forhref").click(function () {
+                $("[href],a[target='_blank']").hide();
+            });
+        });
+
+    </script>
 </head>
 
 <body>
+    <h2 style="color: green;">Selectors</h2>
+    <p class="para1">First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
 
+    <p>List 1:</p>
+    <ul type="square">
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>List 2:</p>
+    <ul type="square">
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <p><a href="https://www.github.com" target="_blank">Github</a></p>
+
+    <!-- Hide all P tags -->
+    <input type="button" value="Hide all p tags" id="hidden">
+
+    <!-- Show all P tags -->
+    <input type="button" value="Show all p tags" id="visible">
+
+    <!-- Hide all content -->
+    <input type="button" value="Hide all content" id="hideall">
+
+    <!-- Hide particular button -->
+    <input type="button" value="Hide this button" id="hidebtn">
+
+    <!-- Hide Para1 -->
+    <input type="button" value="Hide Para1" id="hidepara1">
+
+    <!-- Hide first and last para -->
+    <input type="button" value="First Para hide" id="firstpara">
+    <input type="button" value="Last Para hide" id="lastpara">
+
+    <!-- Hide ul li -->
+    <input type="button" value="Hide list" id="orderlist">
+
+    <!-- ul li -->
+    <input type="button" value="Hide first element" id="unorderlist">
+
+    <!-- HREF -->
+    <input type="button" value="Hide HREF" id="forhref">
 </body>
 
 </html>
