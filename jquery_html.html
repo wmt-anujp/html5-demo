@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Jquery HTML</title>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color: lightgreen;">Jquery HTML Task</h2>
+
+    <!-- Get Content -->
+    <h3 style="color:aqua">Get Content</h3>
+    <p id="para1">This is <b>bold</b> text in this paragraph.</p>
+    <p id="para2">Beautiful world</p>
+    <p>Name: <input type="text" id="para3" value="PHP"></p>
+    <p><a href="https://www.github.com" id="foratr">Github.com</a></p>
+
+    <input type="button" id="btn1" value="Show Text Alert">
+    <input type="button" id="btn2" value="Show HTML Alert">
+    <input type="button" id="btn3" value="Show HTML Value">
+    <input type="button" id="btn4" value="Show Attribute">
+
+    <!-- Set Content -->
+    <h3 style="color:aqua">Set Content</h3>
+    <input type="button" id="btn5" value="Set Text">
+    <input type="button" id="btn6" value="Set HTML">
+    <input type="button" id="btn7" value="Set Value">
+
+    <p id="para4">This is a <b>bold</b> paragraph.</p>
+    <p id="para5">This is another <b>bold</b> paragraph.</p>
+
+    <input type="button" id="btn8" value="Show Old/New Text">
+    <input type="button" id="btn9" value="Show Old/New HTML">
+    <input type="button" id="btn10" value="Change Attribute">
+
+    <!-- Add Content -->
+    <h3 style="color:aqua">Add Content</h3>
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <input type="button" id="btn11" value="Append Text">
+    <input type="button" id="btn12" value="Append List Item">
+    <input type="button" id="btn13" value="Prepend Text">
+    <input type="button" id="btn14" value="Prepend List Item">
+    <input type="button" onclick="appendText()" value="Append Text"><br><br>
+    <img src="tree.jpg" alt="tree photo" width="20%" height="20%"><br>
+    <input type="button" id="btn15" value="Add Before">
+    <input type="button" id="btn16" value="Add After">
+
+
+    <!-- remove content -->
+    <input type="button" id="btn17" value="Remove Image"><br><br>
+    <div id="div1" style="height:150px;width:300px;border:1px solid black;background-color:grey;">
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+    </div><br>
+    <input type="button" id="btn18" value="Empty">
+
+    <!-- add class -->
+    <div id="classdiv">This is some text.</div>
+    <input type="button" id="btn19" value="Add class to element">
+
+    <input type="button" id="btn20" value="change color of P">
+    <input type="button" id="btn21" value="Show Dimensions of DIV">
+
+    <!-- JS Script starts -->
+    <script>
+        $(document).ready(function () {
+            // Get content
+            $("#btn1").click(function () {
+                alert("Text is: " + $("#para1").text());
+            });
+            $("#btn2").click(function () {
+                alert("HTML is: " + $("#para1").html());
+            });
+            $("#btn3").click(function () {
+                alert("Value is: " + $("#para3").val());
+            });
+            $("#btn4").click(function () {
+                alert($("#foratr").attr("href"));
+            });
+
+            // Set content
+            $("#btn5").click(function () {
+                $("#para1").text("Anuj Panchal");
+            });
+            $("#btn6").click(function () {
+                $("#para2").html("<b>Copyright</b>");
+            });
+            $("#btn7").click(function () {
+                $("#para3").val("Laravel");
+            });
+
+            // old content new content
+            $("#btn8").click(function () {
+                $("#para4").text(function (i, origText) {
+                    return "Old text: " + origText + " New text: Anuj panchal (index: " + i + ")";
+                });
+            });
+            $("#btn9").click(function () {
+                $("#para5").html(function (i, origText) {
+                    return "Old html: " + origText + " New html: Hello <b>Laravel developer</b> (index: " + i + ")";
+                });
+            });
+            // change atr
+            $("#btn10").click(function () {
+                $("#foratr").attr("href", "https://www.google.com");
+                $("#foratr").html("Google.com");
+            });
+            // Add Content
+            $("#btn11").click(function () {
+                $("p").append(" Appended text.");
+            });
+            $("#btn12").click(function () {
+                $("ol").append("<li>this is Appended item</li>");
+            });
+            $("#btn13").click(function () {
+                $("p").prepend("Prepended text. ");
+            });
+            $("#btn14").click(function () {
+                $("ol").prepend("<li>Prepended item</li>");
+            });
+            $("#btn15").click(function () {
+                $("img").before("<b>Before</b>");
+            });
+            $("#btn16").click(function () {
+                $("img").after("<i>After</i>");
+            });
+
+            // remove content
+            $("#btn17").click(function () {
+                $("img").remove();
+            });
+            $("#btn18").click(function () {
+                $("#div1").empty();
+            });
+
+            // add class
+            $("#btn19").click(function () {
+                $("#classdiv").addClass("important blue");
+            });
+
+            // css color
+            $("#btn20").click(function () {
+                $("#para1").css({ "background-color": "grey" });
+            });
+
+            // Dimensions
+            $("#btn21").click(function () {
+                var txt = "";
+                txt += "Width of div: " + $("#div1").width() + "</br>";
+                txt += "Height of div: " + $("#div1").height() + "<br>";
+                txt += "Inner width of div: " + $("#div1").innerWidth() + "px" + "</br>";
+                txt += "Inner height of div: " + $("#div1").innerHeight() + "<br>";
+                txt += "Outer width of div: " + $("#div1").outerWidth() + "<br>";
+                txt += "Outer height of div: " + $("#div1").outerWidth() + "<br>";
+                $("#div1").html(txt);
+            });
+        });
+
+        function appendText() {
+            var txt1 = "<p>PHP</p>";
+            var txt2 = $("<p></p>").text("Laravel");
+            var txt3 = document.createElement("p");
+            txt3.innerHTML = "JS";
+            $("body").append(txt1, txt2, txt3);
+        }
+    </script>
+
+</body>
+
+</html>
