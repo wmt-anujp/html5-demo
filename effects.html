@@ -12,7 +12,7 @@
 <body>
     <h1 style="color: lightgreen;">Jquery Effects</h1>
     <h3>Hide, Show & Toggle</h3>
-    <p>some thing</p>
+    <p>SomeThing Important</p>
 
     <input type="button" id="hide" value="Hide"></button>
     <input type="button" id="show" value="Show"></button>
@@ -21,7 +21,9 @@
     <script>
         $(document).ready(function () {
             $("#hide").click(function () {
-                $("p").hide(1000);
+                $("p").hide("slow", function () {
+                    alert("Text is now hidden");
+                });
             });
             $("#show").click(function () {
                 $("p").show(1000);
@@ -42,6 +44,38 @@
     <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
     <div id="div3" style="width:80px;height:80px;display:none;background-color:lightyellow;"></div>
 
+    <!-- Slidding -->
+    <h3>SlideDown, SlideUp, SlidToggle & Stop</h3>
+    <input type="button" id="animatestop" value="Stop Animation"><br><br>
+    <div id="main">Click to slide</div>
+    <div id="afterslide">After Slide Down</div>
+
+    <style>
+        #main,
+        #afterslide {
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+
+        #afterslide {
+            padding: 30px;
+            display: none;
+        }
+    </style>
+
+
+    <!-- Animate -->
+    <h3>Animation</h3>
+    <input type="button" id="animation" value="Click to animate">
+    <input type="button" id="animationquery" value="Query animate"><br><br>
+    <div id="animatediv" style="background:grey;height:100px;width:100px;position:relative;">Anuj</div><br>
+
+    <!-- Chaining -->
+    <p id="chainingpara">jQuery is fun!!</p>
+    <input type="button" id="chaining" value="try chaining">
+
+    <!-- JS SCript -->
     <script>
         $(document).ready(function () {
             $("#fadeIn").click(function () {
@@ -63,41 +97,42 @@
                 $("#div1").fadeTo("slow", 0.15);
                 $("#div2").fadeTo("slow", 0.4);
                 $("#div3").fadeTo("slow", 0.7);
-            })
-        });
-    </script>
-
-    <!-- Slidding -->
-    <h3>SlideDown, SlideUp, SlidToggle</h3>
-    <div id="main">Click to slide</div>
-    <div id="afterslide">Click to slide</div>
-    <style>
-        #main,
-        #afterslide {
-            background-color: lightgreen;
-            text-align: center;
-            padding: 10px;
-            width: 50%;
-        }
-
-        #afterslide {
-            padding: 30px;
-            display: none;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function () {
+            });
             $("#main").click(function () {
-                $("#afterslide").slideDown("slow");
+                $("#afterslide").slideDown(3000);
+            });
+            // $("#main").click(function () {
+            //     $("#afterslide").slideUp("slow");
+            // });
+            // $("#main").click(function () {
+            //     $("#afterslide").slideToggle("30000");
+            // });
+            $("#animatestop").click(function () {
+                $("#afterslide").stop();
+            });
+            $("#animation").click(function () {
+                $("#animatediv").animate({
+                    left: '250px',
+                    opacity: 0.3,
+                    width: "+=210px",
+                    height: "toggle"
+                });
+            });
+            $(document).ready(function () {
+                $("#animationquery").click(function () {
+                    var div = $("#animatediv");
+                    div.animate({ height: '300px', opacity: '0.5' }, "slow");
+                    div.animate({ width: '150px', opacity: '0.8' }, "slow");
+                    div.animate({ fontSize: '50px', opacity: '0.5' }, "slow");
+                    // div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                    // div.animate({ width: '100px', opacity: '0.8' }, "slow");
+                });
+            });
+            $("#chaining").click(function () {
+                $("#chainingpara").css("color", "green").slideUp(2000).slideDown(2000);
             });
         });
     </script>
 </body>
 
 </html>
-
-<!-- Date: 09/02/2022
-Project:WMT Training
--learnt and implemented the jquery selectors, events
--almost completed effects task -->
