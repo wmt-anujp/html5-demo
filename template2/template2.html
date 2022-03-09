@@ -120,7 +120,7 @@
         </div>
 
         <!-- <div class="w-100"> -->
-        <div class="row w-100 text-center justify-content-around py-4 border-top border-bottom mt-5">
+        <div class="row w-100 text-center justify-content-around py-4" style="margin-top: 40px !important ;">
             <div class="col-6 col-md-2 p-md-0 py-3 px-2">
                 <span class="h4 text-secondary">airbnb</span>
             </div>
@@ -297,18 +297,20 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" style="border-radius: 40px;" type="button"
-                        data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                        <span class="rounded-circle w-25 position-relative end-50"
-                            style="background-color: #3A5DEA;font-size: 30px;" aria-hidden="true"><i
-                                class="bi bi-arrow-left-short"></i></span>
+                    <!-- previous button -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span
+                            class="rounded-circle w-auto h-auto p-lg-1 p-1 position-relative end-50 bi bi-arrow-left-short"
+                            style="background-color: #3A5DEA;font-size: 30px;" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
+                    <!-- next button -->
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
                         data-bs-slide="next">
-                        <span class="rounded-circle w-25 position-relative start-50"
-                            style="background-color: #3A5DEA;font-size: 30px;" aria-hidden="true"><i
-                                class="bi bi-arrow-right-short"></i></span>
+                        <span
+                            class="rounded-circle w-auto h-auto p-lg-1 p-1 position-relative start-50 bi bi-arrow-right-short"
+                            style="background-color: #3A5DEA;font-size: 30px;" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -365,9 +367,9 @@
         <div class="row g-0 mt-5">
             <!-- 1st card -->
             <div class="col-md-6 col-12">
-                <div class="card h-100 shadow-lg bg-white rounded">
+                <div class="card h-100 shadow-lg bg-white">
                     <div class="card-body">
-                        <div class="row card-text">
+                        <div class="row card-text mt-4">
                             <div class="col-12 d-flex justify-content-center">
                                 <p class="card-title p-2"
                                     style="background-color: lightblue;color: blue;border-radius: 20px;font-size: 10px;font-family: 'Segoe UI';">
@@ -377,27 +379,28 @@
                         <div class="row p-3 card-text">
                             <div class="col-12 d-flex justify-content-center" style="font-family: Segoe UI;">
                                 <div>
-                                    <h1><sup>$</sup>29<sub>/mo</sub></h1>
+                                    <p class="display-5" style="font-family: monospace;"><sup>$</sup>29<sub>/mo</sub>
+                                    </p>
                                     <p class="text-muted ps-4">per seat</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="font-weight: 300;">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
-                                    <p><i class="p-2 bi bi-check-circle text-success"></i>
+                                    <p><i class="p-1 bi bi-check-circle text-success"></i>
                                         Rich, responsive landing pages
                                     </p>
-                                    <p><i class="p-2 bi bi-check-circle text-success"></i>
+                                    <p><i class="p-1 bi bi-check-circle text-success"></i>
                                         100+ styled components
                                     </p>
-                                    <p><i class="p-2 bi bi-check-circle text-success"></i>
+                                    <p><i class="p-1 bi bi-check-circle text-success"></i>
                                         Flexible, simple license
                                     </p>
-                                    <p><i class="p-2 bi bi-check-circle text-success"></i>
+                                    <p><i class="p-1 bi bi-check-circle text-success"></i>
                                         Speedy build tooling
                                     </p>
-                                    <p><i class="p-2 bi bi-check-circle text-success"></i>
+                                    <p><i class="p-1 bi bi-check-circle text-success"></i>
                                         6 months free support included
                                     </p>
                                 </div>
@@ -410,10 +413,10 @@
                 </div>
             </div>
             <!-- 2nd card -->
-            <div class="col-md-6 col-12 mt-md-0 mt-4 h-100 d-flex align-items-center">
-                <div class="card h-100 shadow-lg bg-white rounded">
+            <div class="col-md-5 col-12 mt-md-0 mt-4 h-100 d-flex align-items-center">
+                <div class="card h-100 shadow-sm bg-white my-md-5">
                     <div class="card-body">
-                        <div class="row card-text">
+                        <div class="row card-text mt-4">
                             <div class="col-12 d-flex justify-content-center">
                                 <p class="card-title p-2"
                                     style="background-color: lightblue;color: blue;border-radius: 20px;font-size: 10px;font-family: 'Segoe UI';">
@@ -424,9 +427,10 @@
                         <div class="row px-5 mt-5 card-text">
                             <div class="col-12 text-center">
                                 <div>
-                                    <p class="text-muted">We offer variable pricing with discounts for larger
+                                    <span class="text-muted" style="font-weight: 300;">We offer variable pricing with
+                                        discounts for larger
                                         organizations. Get in touch
-                                        with us and we'll figure out something that works for everyone.</p>
+                                        with us and we'll figure out something that works for everyone.</span>
                                 </div>
                             </div>
                         </div>
@@ -502,7 +506,7 @@
 
             <!-- Get landkit and save your time -->
             <div class="row mt-5 d-flex justify-content-center">
-                <div class="col-12 col-md-7 text-center">
+                <div class="col-12 col-md-7 text-center mb-5">
                     <div class="col-12 d-flex justify-content-center">
                         <p><button class="btn btn-success mt-md-3" style="color: white;border-radius: 20px;"
                                 disabled>GET
@@ -512,8 +516,8 @@
                     <p class="text-muted">Stop wasting time trying to do it the "right way" and build a site from
                         scratch.</p>
                     <p class="text-muted">Landkit is faster, easier, and you still have complete control.</p>
-                    <p class="mt-4"><button class="btn btn-lg btn-success mt-md-3" style="color: white;">But it
-                            now<i class=" bi bi-arrow-right ps-2"></i></button>
+                    <p class="mt-4"><button class="btn btn-lg btn-success mt-md-3" style="color: white;">Buy it
+                            now<i class="bi bi-arrow-right ps-2"></i></button>
                     </p>
                 </div>
             </div>
